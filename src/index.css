@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: "Inter", -apple-system, sans-serif;
+    color: #1A1A2E;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .section-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-sans-body font-semibold uppercase tracking-wider;
+    background-color: #2ECC71;
+    color: #1A1A2E;
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #27AE60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(46, 204, 113, 0.25);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-sans-body font-semibold uppercase tracking-wider;
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Ensure program items render properly */
+  .program-item {
+    @apply will-change-auto;
+    opacity: 1;
+  }
+
+  .section-label {
+    @apply font-sans-body font-semibold uppercase;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: #2ECC71;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-xl shadow-black/10;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+
+  /* Smooth animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  /* Button animations */
+  .btn-hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .btn-hover-glow:hover {
+    @apply shadow-lg shadow-emerald/30;
+  }
+
+  /* Card animations */
+  .card-hover {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg shadow-black/10 -translate-y-1;
+  }
+
+  /* Pulse animation for CTAs */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(46, 204, 113, 0.5);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
