@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,CSSProperties } from "react";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import gsap from "gsap";
 
@@ -152,6 +152,7 @@ export function GalleryImage({
   alt: string;
   index: number;
   className?: string;
+  style?: CSSProperties;
 }) {
   return (
     <div
@@ -162,6 +163,7 @@ export function GalleryImage({
       <img
         src={src}
         alt={alt}
+        style={style}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         loading="lazy"
       />
