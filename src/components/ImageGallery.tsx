@@ -148,6 +148,7 @@ export function GalleryImage({
   alt,
   index,
   className = "",
+  style,
 }: {
   src: string;
   alt: string;
