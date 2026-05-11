@@ -1,4 +1,5 @@
-import { useState, useEffect,CSSProperties } from "react";
+import { useState, useEffect} from "react";
+import type { CSSProperties } from "react";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import gsap from "gsap";
 
