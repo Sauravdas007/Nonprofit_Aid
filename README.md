@@ -1,3 +1,4 @@
+
 # Horizon Aid
 
 <p align="center">
@@ -17,6 +18,12 @@ A cinematic nonprofit platform built with React, TypeScript, Tailwind CSS, and G
 </p>
 
 ---
+<img width="1918" height="1137" alt="Screenshot 2026-05-11 213217" src="https://github.com/user-attachments/assets/6c5b71a0-9836-4532-9560-a5e3af4adc8a" />
+<img width="1907" height="1133" alt="Screenshot 2026-05-11 213231" src="https://github.com/user-attachments/assets/a9b1328c-bffc-4d70-a106-58b4d16fa9e1" />
+<img width="1918" height="1132" alt="Screenshot 2026-05-11 213248" src="https://github.com/user-attachments/assets/08eba3f2-cd8f-4d04-af8c-a1111b32f652" />
+<img width="1088" height="1112" alt="Screenshot 2026-05-11 213338" src="https://github.com/user-attachments/assets/dd48438a-a63a-48c7-9f04-dae29e9f828a" />
+<img width="1493" height="1020" alt="Screenshot 2026-05-11 213426" src="https://github.com/user-attachments/assets/922ad0a6-e998-498e-bcc4-b982455d41a7" />
+
 
 # 🌍 Overview
 
